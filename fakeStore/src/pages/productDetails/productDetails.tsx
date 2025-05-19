@@ -1,7 +1,8 @@
-// src/components/ProductDetails.tsx
+
 import React from "react";
-import "./ProductDetails.css";
-import { useLocation, useParams } from "react-router-dom";
+import "./productDetails.css";
+import { useLocation } from "react-router-dom";
+
 type Product = {
   id: number;
   title: string;
@@ -17,23 +18,23 @@ type ProductDetailsProps = {
 };
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ product, onAddToCart }) => {
-const { state } = useLocation(); 
-  const { id } = useParams();
-  console.log(0);
-  
+  const { state } = useLocation() as { state: Product };
+
   return (
-    <div className="product-details">
-      <div className="product-details__image-container">
-        <img src={state.image} alt={state?.title} className="product-details__image" />
-      </div>
-      <div className="product-details__info">
-        <h2 className="product-details__title">{state.title}</h2>
-        <p className="product-details__category">Category: {state.category}</p>
-        <p className="product-details__description">{state.description}</p>
-        <p className="product-details__price">${state.price}</p>
-        <button className="product-details__button" onClick={() => onAddToCart(product)}>
-          Add to Cart
-        </button>
+    <div className="details-container">
+      <div className="details-content">
+        <div className="details-image">
+          <img src={state.image} alt={state.title} />
+        </div>
+        <div className="details-info">
+          <h1>{state.title}</h1>
+          <p className="category">الفئة: {state.category}</p>
+          <p className="description">{state.description}</p>
+          <p className="price">${state.price}</p>
+          <button className="add-to-cart" onClick={() => onAddToCart(state)}>
+            Add To Cad
+          </button>
+        </div>
       </div>
     </div>
   );
