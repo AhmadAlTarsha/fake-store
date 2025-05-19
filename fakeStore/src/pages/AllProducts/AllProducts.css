@@ -1,0 +1,32 @@
+.products-page {
+  padding: 24px;
+}
+
+.products-navbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.category-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e7ff;
+  color: #1e40af;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.category-button.active,
+.category-button:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

@@ -1,0 +1,23 @@
+
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  margin-left: 220px; /* لأن السايدبار ثابت بعرض 220px */
+}
+
+footer {
+  flex-shrink: 0;
+}

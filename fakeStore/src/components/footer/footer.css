@@ -1,0 +1,39 @@
+@import '../../styles/variables.css';
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 220px; 
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer__section {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer__section h3,
+.footer__section h4 {
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+}
+
+.footer__section p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.footer__bottom {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
