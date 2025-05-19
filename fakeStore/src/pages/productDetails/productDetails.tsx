@@ -1,7 +1,7 @@
 // src/components/ProductDetails.tsx
 import React from "react";
 import "./ProductDetails.css";
-
+import { useLocation, useParams } from "react-router-dom";
 type Product = {
   id: number;
   title: string;
@@ -17,19 +17,20 @@ type ProductDetailsProps = {
 };
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ product, onAddToCart }) => {
-
+const { state } = useLocation(); 
+  const { id } = useParams();
   console.log(0);
   
   return (
     <div className="product-details">
       <div className="product-details__image-container">
-        <img src={product.image} alt={product.title} className="product-details__image" />
+        <img src={state.image} alt={state?.title} className="product-details__image" />
       </div>
       <div className="product-details__info">
-        <h2 className="product-details__title">{product.title}</h2>
-        <p className="product-details__category">Category: {product.category}</p>
-        <p className="product-details__description">{product.description}</p>
-        <p className="product-details__price">${product.price}</p>
+        <h2 className="product-details__title">{state.title}</h2>
+        <p className="product-details__category">Category: {state.category}</p>
+        <p className="product-details__description">{state.description}</p>
+        <p className="product-details__price">${state.price}</p>
         <button className="product-details__button" onClick={() => onAddToCart(product)}>
           Add to Cart
         </button>
