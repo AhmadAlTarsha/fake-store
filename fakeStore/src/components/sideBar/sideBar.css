@@ -1,0 +1,36 @@
+@import "../../styles/variables.css";
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+  z-index: 50;
+  margin-top: 72px;
+}
+
+.sidebar__button {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar__button:hover {
+  background-color: #0284c7;
+}
