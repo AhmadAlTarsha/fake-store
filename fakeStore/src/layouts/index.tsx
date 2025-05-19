@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Header from "../components/header/header";
 
 const Main = () => {
-  return (
-    <div>Main</div>
-  )
-}
+  return <Header />;
+};
 
-export default Main
+export default Main;
