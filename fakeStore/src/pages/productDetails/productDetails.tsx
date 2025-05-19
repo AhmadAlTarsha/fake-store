@@ -17,6 +17,9 @@ type ProductDetailsProps = {
 };
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ product, onAddToCart }) => {
+
+  console.log(0);
+  
   return (
     <div className="product-details">
       <div className="product-details__image-container">
