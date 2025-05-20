@@ -1,6 +1,6 @@
 import React from "react";
 import "./sideBar.css";
-import { sidebarButtons } from "../../constants/sideBarItem"; // تأكد من المسار حسب مشروعك
+import { sidebarButtons } from "../../constants/sideBarItem"; 
 import { useNavigate } from "react-router-dom";
 
 const Sidebar: React.FC = () => {

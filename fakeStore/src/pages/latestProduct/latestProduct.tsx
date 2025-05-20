@@ -1,4 +1,4 @@
-// src/components/LatestProductsSlider.tsx
+
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../constants/api";
 import "./latestProduct.css";

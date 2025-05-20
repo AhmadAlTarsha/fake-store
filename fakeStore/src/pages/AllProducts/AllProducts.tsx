@@ -33,7 +33,7 @@ const ProductsPage: React.FC = () => {
             }`}
             onClick={() => {
               setSelectedCategory(cat);
-              console.log(categories);
+         
             }}
           >
             {cat}

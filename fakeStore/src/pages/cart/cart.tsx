@@ -1,11 +1,11 @@
-// src/pages/CartPage.tsx
+
 import React from "react";
 import "./CartPage.css";
 import { useCart } from "../../context/cartContext";
 
 const CartPage: React.FC = () => {
   const { cartItems, removeFromCart } = useCart();
-  console.log(cartItems);
+  
   
 
   return (
