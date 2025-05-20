@@ -1,8 +1,7 @@
-
 import React from "react";
 import "./productDetails.css";
 import { useLocation } from "react-router-dom";
-
+import { useCart } from "../../context/cartContext";
 type Product = {
   id: number;
   title: string;
@@ -17,8 +16,9 @@ type ProductDetailsProps = {
   onAddToCart: (product: Product) => void;
 };
 
-const ProductDetails: React.FC<ProductDetailsProps> = ({ product, onAddToCart }) => {
+const ProductDetails: React.FC<ProductDetailsProps> = ({}) => {
   const { state } = useLocation() as { state: Product };
+  const { addToCart } = useCart();
 
   return (
     <div className="details-container">
@@ -31,7 +31,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product, onAddToCart })
           <p className="category">الفئة: {state.category}</p>
           <p className="description">{state.description}</p>
           <p className="price">${state.price}</p>
-          <button className="add-to-cart" onClick={() => onAddToCart(state)}>
+          <button className="add-to-cart" onClick={() => addToCart(state)}>
             Add To Cad
           </button>
         </div>

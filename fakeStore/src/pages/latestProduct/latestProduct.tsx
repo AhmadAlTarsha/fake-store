@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../constants/api";
 import "./latestProduct.css";
+import { useCart } from "../../context/cartContext";
+
+
 
 type Product = {
   id: number;
@@ -13,6 +16,8 @@ type Product = {
 const LatestProductsSlider: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { addToCart } = useCart();
+  
 
   useEffect(() => {
     fetch(`${BASE_URL}/products?limit=10`)
@@ -26,10 +31,6 @@ const LatestProductsSlider: React.FC = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === products.length - 1 ? 0 : prev + 1));
-  };
-
-  const addToCart = (product: Product) => {
-    console.log("Add to cart:", product);
   };
 
   return (
@@ -55,7 +56,7 @@ const LatestProductsSlider: React.FC = () => {
                 className="add-cart-btn"
                 onClick={() => addToCart(products[currentIndex])}
               >
-                Add To Card
+                Add To Cart
               </button>
             </div>
           </div>
